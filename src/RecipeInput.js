@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from '@material-ui/core';
 import "./RecipeInput.css";
 
 
@@ -61,7 +62,7 @@ class RecipeInput extends Component {
         return(
           <div className="recipe-form-container">
               <form className="recipe-form" onSubmit={this.handleSubmit}>
-                  <button
+                  <button variant="contained" color="secondary"
                     type="button"
                     className="close-button"
                     onClick={onClose}
@@ -105,13 +106,12 @@ class RecipeInput extends Component {
                   >
                     +
                   </button>
-                  <button
+                  <Button  variant="contained" color="primary"
                     type="submit"
                     className="buttons"
-                    style={{alignSelf: 'flex-end', marginRight: 0}}
                   >
                       SAVE
-                  </button>
+                  </Button>
               </form>
           </div>
         );
